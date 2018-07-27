@@ -1,96 +1,96 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    {% load staticfiles %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
-    <!---->
-    <title>Home</title>
-    <!-- -->
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+{% extends 'base.html'%}
+{% load staticfiles%}
 
-    <!-- Custom styles for this template -->
-    <!--<link href="album.css" rel="stylesheet">-->
-  </head>
 
-  <body>
+{% block content %}
+<main role="main">
+<!-- second extra stuff -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <!--<img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">-->
+      <img class="first-slide" src="{% static 's6.jpg' %}" alt="First slide">
 
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'home' %}">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="{%url 'allblogs'%}">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/emmanuelcodev">GitHub</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.linkedin.com/in/emmanuel-cocom-8834a1117/">LinkedIn</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="http://twitter.com/CodevEmmanuel">Twitter <span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-    <main role="main">
-
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Emmanuel Codes</h1>
-          <p class="lead text-muted">Python enthusiast changing the world one program at a time.</p>
-          <p>
-            <a href="mailto:emmanuelcodes7@gmail.com" class="btn btn-primary my-2">Email Me</a>
-            <!--<a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
-          </p>
-          <img src="{% static 'nick.jpg' %}" alt="" height="300" width="300"/>
-        </div>
-      </section>
-
-      <div class="album py-5 bg-light">
-        <div class="container">
-
-          <div class="row">
-            {% for job in jobs.all %}
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src ={{ job.image.url}} alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">{{job.summary}}</p>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
+      <div class="container">
+        <div class="carousel-caption text-left">
+          <h1>Work Samples</h1>
+          <!--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
+          <p>A closer at some of my most recent work. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus vehicula ut id elit.</p>
+          <p><a class="btn btn-lg btn-primary" href="#" role="button">Explore Gallery</a></p>
         </div>
       </div>
+    </div>
+    <div class="carousel-item">
+      <img class="second-slide" src="{% static 's6.jpg' %}" alt="Second slide">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Biography.</h1>
+          <!--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
+          <p>Python enthusiast changing the world one program at a time.quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. </p>
+          <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="third-slide" src="{% static 's6.jpg' %}" alt="Third slide">
+      <div class="container">
+        <div class="carousel-caption text-right">
+          <h1>Learning Timeline</h1>
+          <!--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
+          <p>From my humble start running my first 'Hello World' program to my pursuit of AI. Webscrapping, Desktop applications, Django Developments, Pandas and More icula ut id elit.</p>
+          <p><a class="btn btn-lg btn-primary" href="#" role="button">Inspect Timeline</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <!--<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">-->
+            <img class="rounded-circle" src="{% static 'testimonials.jpg' %}" alt="Generic placeholder image" width="140" height="140">
+            <h2>Testimonials</h2>
+            <!--<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>-->
+            <p>This is sample text. Nothing more. Real Testimonials comming some time in the future. id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="{% static 'certificate.png' %}" alt="Generic placeholder image" width="140" height="140">
+            <h2>Certificates</h2>
+            <p>Check out the Certificates I've earned from Udemy, linkedin and Coursera. Content include Python, Django, Web Developement, MYSQL, Statistics, Webscrapping, Regular Expressions, Objective Oriented Programming and Pandas.</p>
+            <!--<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>-->
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="{% static 'code_icon1.png' %}" alt="Generic placeholder image" width="140" height="140">
+            <h2>100DaysOfCode</h2>
+            <!--<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
+            <p>One Hundred Days of coding personal projects. I am currently in my second round. Come see what I like to tinker with on my personal time. Fusce dapibus, tellus tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+      </div>
     </main>
 
-    <footer class="text-muted">
-      <div class="container text-center">
-        <p>© Emmanuel Codev {% now "Y" %}</p>
-      </div>
-    </footer>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
-  </body>
-</html>
+{% endblock %}

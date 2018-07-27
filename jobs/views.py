@@ -6,4 +6,6 @@ from .models import Job
 
 def home(request):
     jobs = Job.objects
+    #for x,y in request.META.items():
+        #print(x, ' : ', y)
     return render(request, os.path.join('jobs', 'home.html'), {'jobs':jobs})
