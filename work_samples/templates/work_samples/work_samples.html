@@ -1,0 +1,149 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+
+
+{% block content%}
+
+
+
+<div class="row pt-2">
+  <div class="col-1 temp_content">
+
+  </div>
+  <div class="col-2 pt-2 mr-1 project_details temp_content">
+    <h5>Projects</h5>
+    <br />
+    <a href="{% url 'work_samples_int' 1%}"><p>Portfolio</p></a>
+    <a href="{% url 'work_samples_int' 2%}"><p>Reading Tracker</p></a>
+    <a href="{% url 'work_samples_int' 3%}"><p>Guestbook</p></a>
+
+
+
+
+
+    <br />
+    <h5>Category</h5>
+    <br />
+    <p>{{project.category1}}</p>
+    <p >{{project.category2}}</p>
+    <p >{{project.category3}}</p>
+
+
+    <br />
+    <h5>Source Files</h5>
+    <br />
+    <a href="{{ project.github_or_url}}"><p>{{project.github_or_url_title}}</p></a>
+
+  </div>
+
+  <div id = 'small_cases' class="col-8 pt-2">
+
+  <div class="temp_hidden nav">
+    <br />
+
+    <ul>
+
+      <li><a href="{% url 'work_samples_int' 1%}">Portfolio</a></li>
+      <li><a href="{% url 'work_samples_int' 2%}">Reading Tracker  </a></li>
+      <li><a href="{% url 'work_samples_int' 3%}">Guestbook</a></li>
+    </ul>
+
+  </div>
+
+
+
+      <div class="Yo">
+        <img class="img-fluid" src="{{project.main_image.url}}" alt="{{project.alt}}">
+
+
+      </div>
+
+      <div style = 'max-width:750px;'>
+          <h4 style = "text-align: center;">{{project.project_name}}</h4>
+          <p  style = "text-align: justify;">{{project.objective}}{{project.challenges}}</p>
+
+
+          <p  style = " text-align: justify;">{{project.accomplishments}}{{project.after_thought}}</p>
+
+          <p style = " text-align: justify;"> {{project.technology_used}}</p>
+
+        </div>
+
+
+
+
+
+
+
+       <br />
+       <div >
+         <img class="img-fluid" src="{{project.image2.url}}" alt="{{project.alt}}" >
+       </div>
+       <br />
+       <div>
+        <img class="img-fluid" src="{{project.image3.url}}" alt="{{project.alt}}" >
+       </div>
+
+       <br />
+       <div class="">
+         <img class="img-fluid" src="{{project.image4.url}}" alt="{{project.alt}}" >
+       </div>
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <script>
+ if (window.innerWidth<= 600) {
+   document.getElementById("small_cases").classList.remove('col-8');
+   document.getElementById("small_cases").classList.add('col-12');
+
+ // download complicated script
+ // swap in full-source images for low-source ones
+}
+
+ function device_changing(){
+
+   if (window.innerWidth<= 600) {
+     document.getElementById("small_cases").classList.remove('col-8');
+     document.getElementById("small_cases").classList.add('col-12');
+
+   // download complicated script
+   // swap in full-source images for low-source ones
+ }else {
+   document.getElementById("small_cases").classList.remove('col-12');
+   document.getElementById("small_cases").classList.add('col-8');
+ }
+
+
+ }
+ window.addEventListener("resize", device_changing);
+
+
+
+   Holder.addTheme('thumb', {
+     bg: '#55595c',
+     fg: '#eceeef',
+     text: 'Thumbnail'
+   });
+
+
+
+ </script>
+{% endblock %}

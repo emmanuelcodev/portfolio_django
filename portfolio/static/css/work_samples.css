@@ -1,0 +1,53 @@
+@media screen and (max-width: 600px){
+
+.row{
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.temp_content{
+  display: none;
+}
+div.temp_hidden{
+  display: block;
+  visibility: true;
+  margin-top: -5px;
+}
+.nav{
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+
+}
+.nav li{
+    display:inline;
+}
+.nav a{
+
+    display:inline-block;
+    padding:10px;
+}
+
+
+
+
+
+}
+
+.temp_hidden{
+  display: none;
+}
+img.img-fluid{
+  min-height: 370px;
+  max-height: 500px;
+}
+h5{
+  margin-bottom: 0px;
+}
+p{margin-top: 0px;}
+div.Yo > img{
+
+}
+ 

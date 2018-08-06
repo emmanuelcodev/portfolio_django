@@ -5,6 +5,8 @@
 {% block content %}
 <main role="main">
 <!-- second extra stuff -->
+
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -13,15 +15,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <!--<img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">-->
       <img class="first-slide" src="{% static 's6.jpg' %}" alt="First slide">
 
       <div class="container">
         <div class="carousel-caption text-left">
           <h1>Work Samples</h1>
-          <!--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
           <p>A closer at some of my most recent work. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus vehicula ut id elit.</p>
-          <p><a class="btn btn-lg btn-primary" href="#" role="button">Explore Gallery</a></p>
+          <p><a class="btn btn-lg btn-primary" href="{% url 'work_samples_int' 1%}" role="button">Explore Gallery</a></p>
         </div>
       </div>
     </div>
@@ -30,7 +30,6 @@
       <div class="container">
         <div class="carousel-caption">
           <h1>Biography.</h1>
-          <!--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
           <p>Python enthusiast changing the world one program at a time.quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. </p>
           <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
         </div>
@@ -41,9 +40,8 @@
       <div class="container">
         <div class="carousel-caption text-right">
           <h1>Learning Timeline</h1>
-          <!--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
           <p>From my humble start running my first 'Hello World' program to my pursuit of AI. Webscrapping, Desktop applications, Django Developments, Pandas and More icula ut id elit.</p>
-          <p><a class="btn btn-lg btn-primary" href="#" role="button">Inspect Timeline</a></p>
+          <p><a class="btn btn-lg btn-primary" href="" role="button">Inspect Timeline</a></p>
         </div>
       </div>
     </div>
@@ -59,38 +57,58 @@
 </div>
 
 
+<!--
+-->
+<!-- Alternative Links
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-0 text-center" style="background: linear-gradient(to right, rgb(102, 255, 255), rgb(51, 153, 255));">
+   <div class="col-md-5 p-lg-5 mx-auto my-5">
+     <h1 class="display-4 font-weight-normal">Emmanuel Codes</h1>
+     <p class="lead font-weight-normal">Python enthusiast making the world better one program at a time.</p>
+     <a class="btn btn-outline-secondary" href="#">Projects</a>
+     <a class="btn btn-outline-secondary" href="#">Biography</a>
+   </div>
+   <div class="product-device shadow-sm d-none d-md-block"  style="background-color: #4D6266 ;"></div>
+   <div class="product-device product-device-2 shadow-sm d-none d-md-block" style="background-color:#4D6266   ;"></div>
+ </div>
+-->
+
+
+
+
+
+
       <!-- Marketing messaging and featurettes
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      <div class="container marketing">
+<div class="container marketing mt-2" style = "background-color: #FFFFFF; width = 100%;">
 
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-4">
-            <!--<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">-->
-            <img class="rounded-circle" src="{% static 'testimonials.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-            <h2>Testimonials</h2>
-            <!--<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>-->
-            <p>This is sample text. Nothing more. Real Testimonials comming some time in the future. id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="{% static 'certificate.png' %}" alt="Generic placeholder image" width="140" height="140">
-            <h2>Certificates</h2>
-            <p>Check out the Certificates I've earned from Udemy, linkedin and Coursera. Content include Python, Django, Web Developement, MYSQL, Statistics, Webscrapping, Regular Expressions, Objective Oriented Programming and Pandas.</p>
-            <!--<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>-->
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="{% static 'code_icon1.png' %}" alt="Generic placeholder image" width="140" height="140">
-            <h2>100DaysOfCode</h2>
-            <!--<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
-            <p>One Hundred Days of coding personal projects. I am currently in my second round. Come see what I like to tinker with on my personal time. Fusce dapibus, tellus tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-      </div>
-    </main>
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <div class="col-lg-4">
+      <!--<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">-->
+      <img class="rounded-circle" src="/static/testimonials.jpg" alt="Generic placeholder image" width="140" height="140">
+      <h2>Testimonials</h2>
+      <!--<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>-->
+      <p>This is sample text. Nothing more. Real Testimonials comming some time in the future. id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+      <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img class="rounded-circle" src="/static/certificate.png" alt="Generic placeholder image" width="140" height="140">
+      <h2>Certificates</h2>
+      <p>Check out the Certificates I've earned from Udemy, linkedin and Coursera. Content include Python, Django, Web Developement, MYSQL, Statistics, Webscrapping, Regular Expressions, Objective Oriented Programming and Pandas.</p>
+      <!--<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>-->
+      <p><a class="btn btn-secondary" href="" role="button">View details &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img class="rounded-circle" src="/static/code_icon1.png" alt="Generic placeholder image" width="140" height="140">
+      <h2>100DaysOfCode</h2>
+      <!--<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
+      <p>One Hundred Days of coding personal projects. I am currently in my second round. Come see what I like to tinker with on my personal time. Fusce dapibus, tellus tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+  </div><!-- /.row -->
+</div>
+</main>
 
 {% endblock %}

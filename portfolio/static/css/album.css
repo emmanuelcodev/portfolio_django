@@ -1,4 +1,4 @@
-
+</* Part of Home page */>
 
 
 
@@ -94,73 +94,3 @@ body {
     margin-top: 7rem;
   }
 }
-
-/* Extra small devices (phones, 600px and down) */
-/*
-@media only screen and (max-width: 600px) {
-  p{
-    color: red;
-  }
-  #first_slide_image{
-    content: url('../images/bg1_s.jpeg');
-    width: 100%;
-    height: 300px;
-  }
-}
-*/
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/*
-@media only screen and (min-width: 600px) {
-  p{
-    color: blue;
-  }
-  #first_slide_image{
-    content: url('../images/bg1_s.jpeg');
-
-  }
-}
-*/
-/* Medium devices (landscape tablets, 768px and up) */
-/*
-@media only screen and (min-width: 768px) {
-  p{
-    color: green;
-  }
-  #first_slide_image{
-    content: url('../images/bg1_s.jpeg');
-  }
-}
-*/
-
-/* Large devices (laptops/desktops, 992px and up) */
-/*
-@media only screen and (min-width: 992px) {
-  p{
-    color: yellow;
-  }
-  #first_slide_image{
-    content: url('../images/bg1_mx.jpeg');
-  }
-}
-
-*/
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/*
-@media only screen and (min-width: 1200px) {
-  p{
-    color: purple;
-  }
-  #first_slide_image{
-    content: url('../images/bg1_l.jpeg');
-  }
-
-  @media only screen and (min-width: 1900px) {
-    p{
-      color: purple;
-    }
-    #first_slide_image{
-      content: url('../images/bg1_l.jpeg');
-    }
-}
-*/

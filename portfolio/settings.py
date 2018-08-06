@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'work_samples.apps.WorkSamplesConfig',
     'jobs.apps.JobsConfig',
     'blog.apps.BlogConfig',
     'django.contrib.admin',
@@ -39,9 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'responsive',#added responsive
-    #'jobs',
-    #'blog',
 ]
 
 MIDDLEWARE = [
