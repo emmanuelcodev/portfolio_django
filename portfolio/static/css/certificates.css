@@ -1,0 +1,20 @@
+@media screen and (max-width: 800px){
+
+
+.temp_content{
+  display: none;
+}
+
+div.temp_hidden{
+  display: block-inline;
+  visibility: true;
+
+}
+#small_cases{
+  width: 100%;
+}
+}
+
+  div.temp_hidden{
+    display: none;
+  }
