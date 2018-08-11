@@ -1,0 +1,158 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+
+
+{% block content%}
+<div class="">
+<br />
+<br />
+<br />
+</div>
+
+
+<div class="container"  style = ''>
+  <div class="row">
+
+
+    <div class="col-1 temp_content"></div>
+    <div class="col-1 temp_content"></div>
+
+
+
+    <div class="col-9" id="small_cases" style = "">
+
+      <table class="table" style = ''>
+        <tbody>
+          <tr>
+            <th>
+                  <h1 class="display-4" style="text-align:center;">Testimonials</h1>
+            </th>
+          </tr>
+          {% for testimony in testimonies.all %}
+          {% if forloop.counter|divisibleby:2%}
+
+
+                    <tr class='second'>
+                      <td>
+
+
+
+                        <div class="card-deck" style="border:none;">
+
+                          <div class="card" style="width: 18rem;background-color:#e9ecef; border:none;margin-left: auto;
+                          margin-right: auto;">
+                            <div class="card-body">
+                              <img class = 'rounded-circle' src="{{testimony.pic_image.url}}" alt="image of a person" style="float:right;">
+                              <blockquote class="card-text fright_text">{{testimony.testimony}}</blockquote>
+
+                              <br style="float:none;">
+                              <div class="person" style="float:left;">
+                                <h5 class = ''>{{testimony.first_name}} {{testimony.last_name}}</h5>
+
+                                <h6 class = 'position' style="">Coding Enthusiast</h6>
+
+                              </div>
+
+
+                            </div>
+                        </div>
+
+
+
+
+                      </td>
+
+                    </tr>
+          {% else %}
+          <tr>
+            <td>
+
+
+
+              <div class="card-deck" style="border:none;">
+
+                <div class="card" style="width: 18rem;background-color:#e9ecef; border:none;margin-left: auto;
+                margin-right: auto;">
+                  <div class="card-body">
+                    <img class = 'rounded-circle' src="{{testimony.pic_image.url}}" alt="image of a person">
+                    <blockquote class="card-text fright_text">{{testimony.testimony}}</blockquote>
+
+                    <br style="float:none;">
+                    <div class="person">
+                      <h5 class = ''>{{testimony.first_name}}</h5>
+
+                      <h6 class = 'position'>{{testimony.last_name}}</h6>
+
+                    </div>
+
+
+                  </div>
+              </div>
+
+
+
+
+            </td>
+
+          </tr>
+
+
+
+
+
+          {% endif %}
+
+
+
+
+            {% endfor %}
+
+
+        </tbody>
+      </table>
+    </div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+    <script type="text/javascript">
+
+
+     function device_changing(){
+
+       if (window.innerWidth<= 800) {
+         document.getElementById("small_cases").classList.remove('col-9');
+         document.getElementById("small_cases").classList.add('col-12');
+
+
+       // download complicated script
+       // swap in full-source images for low-source ones
+     }else {
+       document.getElementById("small_cases").classList.remove('col-12');
+       document.getElementById("small_cases").classList.add('col-9');
+     }
+
+
+
+     }
+
+     window.addEventListener("resize", device_changing);
+
+
+  device_changing()
+
+
+
+   </script>
+
+
+{% endblock %}

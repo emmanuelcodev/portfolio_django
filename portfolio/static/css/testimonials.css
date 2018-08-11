@@ -1,0 +1,59 @@
+body{
+
+      background-color: #3b3f3f;
+    color: #555;
+    font-family: AvenirNext,Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+.position{
+  color: #999;
+  font-style: italic;
+}
+img{
+  max-width: 100px;
+  max-height:100px;
+  float: left;
+  margin-right: 15px;
+}
+div{
+    word-spacing: 1px;
+}
+
+.fright_text{
+
+font-size: 18px;
+font-weight: 300;
+line-height: 30px;
+letter-spacing: .9px;
+padding: 20px 0 25px;
+}
+h4.person_name, h5.person_position, div.person{
+  float:right;
+
+}
+
+.row > *{
+  background-color: 'background-color:#e9ecef';
+}
+div.card{
+  min-width: 350px;
+
+}
+
+
+
+@media (max-width: 800px) {
+  .hidden{
+    display: none;
+
+  }
+  div.temp_content{
+    display: none;
+  }
+  img{
+    max-width: 120px;
+    max-height:120px;
+  }
+}

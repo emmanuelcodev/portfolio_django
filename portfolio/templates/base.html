@@ -10,7 +10,7 @@
     <link rel="icon" href="../../../../favicon.ico">
     <!---->
     <title>Home</title>
-    
+
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
@@ -26,9 +26,13 @@
     <link href="{% static 'css/certificates.css' %}" rel="stylesheet">
     {% endif %}
 
+    {% if testimonials_page%}
+    <link href="{% static 'css/testimonials.css' %}" rel="stylesheet">
+    {% endif %}
+
   </head>
-  {% if jobs_page%}
-    <body>
+  {% if testimonials_page%}
+    <body style = 'background-color: #e9ecef;'>
   {% else %}
   <body>
   {% endif %}
@@ -82,7 +86,7 @@
                   <div class="dropdown-menu bg-dark">
 
 
-                    <a class="nav-link dropdown-item bg-dark" href="https://stackoverflow.com/users/8564711/emmanuel-codev">Testimonials</a>
+                    <a class="nav-link dropdown-item bg-dark" href="{%  url 'testimonials_home'%}">Testimonials</a>
 
                     <a class="nav-link bg-dark" href="https://stackoverflow.com/users/8564711/emmanuel-codev">Biography</a>
 
