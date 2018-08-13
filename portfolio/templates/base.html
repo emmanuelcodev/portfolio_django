@@ -30,6 +30,11 @@
     <link href="{% static 'css/testimonials.css' %}" rel="stylesheet">
     {% endif %}
 
+    {% if biography_page%}
+    <link href="{% static 'css/biography.css' %}" rel="stylesheet">
+    {% endif %}
+
+
   </head>
   {% if testimonials_page%}
     <body style = 'background-color: #e9ecef;'>
@@ -88,7 +93,7 @@
 
                     <a class="nav-link dropdown-item bg-dark" href="{%  url 'testimonials_home'%}">Testimonials</a>
 
-                    <a class="nav-link bg-dark" href="https://stackoverflow.com/users/8564711/emmanuel-codev">Biography</a>
+                    <a class="nav-link bg-dark" href="{% url 'biography_home'%}">Biography</a>
 
 
                 </li>

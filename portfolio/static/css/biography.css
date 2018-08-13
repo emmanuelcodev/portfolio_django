@@ -1,0 +1,23 @@
+
+@media (max-width: 900px) {
+  img.temp_hidden{
+    display: block;
+    visibility: true;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  div.temp_content, td.temp_content{
+    display: none;
+  }
+table{width: 100%; margin-left: 0px; margin-right: 5px;}
+}
+
+
+@media (max-width: 768px) {
+
+}
+
+.temp_hidden{
+  display: none;
+}
