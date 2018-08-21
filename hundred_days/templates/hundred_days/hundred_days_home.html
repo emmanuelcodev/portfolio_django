@@ -1,0 +1,131 @@
+{% extends 'base.html'%}
+{% load staticfiles%}
+
+{%  block content%}
+
+<div class="">
+<br />
+<br />
+<br />
+</div>
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-1 temp_content">
+    </div>
+
+    <div class="col-2 temp_content">
+
+      <p>Sort By :</p>
+      <select>
+        <option value="volvo">Date</option>
+        <option value="saab">Topic</option>
+        <option value="opel">Source</option>
+      </select>
+    </div>
+
+    <div class="col-8 row" id="small_cases">
+<!--
+      <div class="temp_hidden">
+        <p style="">Sort By :  </p>
+          <select>
+            <option value="volvo">Date</option>
+            <option value="saab">Topic</option>
+            <option value="opel">Source</option>
+          </select>
+
+        <br />
+      </div>-->
+
+
+
+
+    {% for hproject in hprojects %}
+
+      <div class="card-deck">
+
+
+        <div class="card" style="min-width:340px;">
+          <div class="card-header">
+            {{hproject.title}}
+        </div>
+          <img class="card-img-top" src="{{hproject.image.url}}" alt="{{HProject.image_alt}}">
+          <div class="card-body">
+            <!--<h5 class="card-title">Card title</h5>-->
+            <p class="card-text">{{hproject.Summary}}</p>
+
+            <p class="card-text"><small class="text-muted">Topics: {{hproject.category1}}, {{hproject.category2}}, {{hproject.category3}}</small></p>
+
+          </div>
+
+          <ul class="list-group list-group-flush">
+           <li class="list-group-item"><a href="{{hproject.url_proof}}">{{hproject.source}}</a></li>
+
+         </ul>
+
+
+
+
+
+
+        </div>
+
+        <br/>
+
+
+
+
+
+      </div>
+
+      <br />
+    {% endfor %}
+
+      <br />
+
+
+
+    </div>
+
+
+
+  </div>
+
+</div>
+
+
+
+
+  <script type="text/javascript">
+
+
+   function device_changing(){
+
+     if (window.innerWidth<= 800) {
+       document.getElementById("small_cases").classList.remove('col-8');
+       document.getElementById("small_cases").classList.add('col-12');
+
+
+     // download complicated script
+     // swap in full-source images for low-source ones
+   }else {
+     document.getElementById("small_cases").classList.remove('col-12');
+     document.getElementById("small_cases").classList.add('col-8');
+   }
+
+
+   }
+
+   window.addEventListener("resize", device_changing);
+
+
+device_changing()
+
+
+
+ </script>
+
+
+{%  endblock %}

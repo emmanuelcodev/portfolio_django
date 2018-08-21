@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'hundred_days.apps.HundredDaysConfig',
     'biography.apps.BiographyConfig',
     'testimonials.apps.TestimonialsConfig',
     'certifications.apps.CertificationsConfig',

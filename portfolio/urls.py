@@ -31,4 +31,5 @@ urlpatterns = [
     path('certifications/',include('certifications.urls')),
     path('testimonials/', include('testimonials.urls')),
     path('biography/', include('biography.urls')),
+    path('hundred_days', include('hundred_days.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

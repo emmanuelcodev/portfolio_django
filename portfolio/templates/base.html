@@ -34,6 +34,10 @@
     <link href="{% static 'css/biography.css' %}" rel="stylesheet">
     {% endif %}
 
+    {% if hundred_days_page%}
+    <link href="{% static 'css/hundred_days.css' %}" rel="stylesheet">
+    {% endif %}
+
 
   </head>
   {% if testimonials_page%}
@@ -76,7 +80,7 @@
 
 
                     <a class="nav-link bg-dark" href="{% url 'certifications_homepage'%}">Certifications</a>
-                    <a class="nav-link bg-dark" href="https://stackoverflow.com/users/8564711/emmanuel-codev">100DaysOfCode</a>
+                    <a class="nav-link bg-dark" href="{% url 'hundred_days_home'%}">100DaysOfCode</a>
                     <a class="nav-link" href="https://stackoverflow.com/users/8564711/emmanuel-codev">Timeline</a>
 
 
