@@ -35,7 +35,7 @@
     {% endif %}
 
     {% if hundred_days_page%}
-    <link href="{% static 'css/hundred_days.css' %}" rel="stylesheet">
+    <link href="{% static 'css/hundred_days.css'%}" rel="stylesheet">
     {% endif %}
 
 
@@ -79,8 +79,8 @@
 
 
 
-                    <a class="nav-link bg-dark" href="{% url 'certifications_homepage'%}">Certifications</a>
-                    <a class="nav-link bg-dark" href="{% url 'hundred_days_home'%}">100DaysOfCode</a>
+                    <a class="nav-link bg-dark" href="{% url 'certifications_homepage' 1%}">Certifications</a>
+                    <a class="nav-link bg-dark" href="{% url 'hundred_days_home' 1%}">100DaysOfCode</a>
                     <a class="nav-link" href="https://stackoverflow.com/users/8564711/emmanuel-codev">Timeline</a>
 
 

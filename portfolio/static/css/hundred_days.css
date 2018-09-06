@@ -18,3 +18,14 @@ div.temp_hidden{
   div.temp_hidden{
     display: none;
   }
+
+
+  div.hundred_days_navigation{
+    color:red;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a.page_number{
+    color:red;
+    }

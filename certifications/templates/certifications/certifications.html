@@ -70,18 +70,28 @@
     {% endfor %}
 
       <br />
-      <div class="temp_hidden">
-        <p style="">Sort By :  </p>
-          <select>
-            <option value="volvo">Date</option>
-            <option value="saab">Topic</option>
-            <option value="opel">Source</option>
-          </select>
 
-        <br />
+
+      <div class = 'certificate_navigation'>
+      <p id  = 'nav_num'>
+        {% if previous_page %}
+        <a class="prev_next_pages" href="{{previous_page}}">&#x21E6; Previous</a>
+        {%else%}
+        &#x21E6; Previous
+        {% endif%}
+
+
+        <a class = 'page_number' href="{{current_page}}">{{current_page}}</a>
+        <a class = 'page_number' href="{{page2}}">{{page2}}</a>
+        <a class = 'page_number' href="{{page3}}">{{page3}}</a>
+
+        ...
+        <a class = 'page_number' href="{{last_page}}">{{last_page}}</a>
+
+        <a class = 'page_number' href="{{page2}}">Next &#x21E8;</a> </p>
       </div>
 
-    
+
     </div>
 
 
